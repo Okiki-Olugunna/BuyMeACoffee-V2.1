@@ -1,0 +1,7281 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_datetime",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_tipper",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "NewCoffeeBought",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_datetime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "WithdrawnCoffees",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "buyCoffee",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "changeOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "howMany",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "kindPeople",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/BuyMeACoffee.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/BuyMeACoffee.sol",
+    "exportedSymbols": {
+      "BuyMeACoffee": [
+        150
+      ]
+    },
+    "id": 151,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "BuyMeACoffee",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 150,
+        "linearizedBaseContracts": [
+          150
+        ],
+        "name": "BuyMeACoffee",
+        "nameLocation": "67:12:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "id": 3,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "109:5:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 150,
+            "src": "86:28:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "86:15:0",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "a616de21",
+            "id": 6,
+            "mutability": "mutable",
+            "name": "kindPeople",
+            "nameLocation": "138:10:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 150,
+            "src": "121:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 4,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "121:7:0",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 5,
+              "nodeType": "ArrayTypeName",
+              "src": "121:9:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 18,
+            "name": "NewCoffeeBought",
+            "nameLocation": "161:15:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_datetime",
+                  "nameLocation": "194:9:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "186:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_tipper",
+                  "nameLocation": "229:7:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "213:23:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "213:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "253:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "246:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "276:7:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "268:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 13,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "268:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 16,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_message",
+                  "nameLocation": "300:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 18,
+                  "src": "293:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "293:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "176:138:0"
+            },
+            "src": "155:160:0"
+          },
+          {
+            "anonymous": false,
+            "id": 24,
+            "name": "WithdrawnCoffees",
+            "nameLocation": "327:16:0",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 23,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_datetime",
+                  "nameLocation": "352:9:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24,
+                  "src": "344:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 19,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "344:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "371:7:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 24,
+                  "src": "363:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 21,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "363:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "343:36:0"
+            },
+            "src": "321:59:0"
+          },
+          {
+            "body": {
+              "id": 35,
+              "nodeType": "Block",
+              "src": "407:82:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 30,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 27,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "425:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 28,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "425:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 29,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 3,
+                          "src": "439:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "425:19:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "596f7520617265206e6f7420746865206f776e65722e",
+                        "id": 31,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "446:24:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d18e18996dbf7b96f1392a5c98d6c1530dd77cf511c83e06c26beea9e4342c3f",
+                          "typeString": "literal_string \"You are not the owner.\""
+                        },
+                        "value": "You are not the owner."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d18e18996dbf7b96f1392a5c98d6c1530dd77cf511c83e06c26beea9e4342c3f",
+                          "typeString": "literal_string \"You are not the owner.\""
+                        }
+                      ],
+                      "id": 26,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "417:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "417:54:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33,
+                  "nodeType": "ExpressionStatement",
+                  "src": "417:54:0"
+                },
+                {
+                  "id": 34,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "481:1:0"
+                }
+              ]
+            },
+            "id": 36,
+            "name": "onlyOwner",
+            "nameLocation": "395:9:0",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 25,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "404:2:0"
+            },
+            "src": "386:103:0",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 47,
+              "nodeType": "Block",
+              "src": "509:44:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 45,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 39,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "519:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 42,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "535:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 43,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "535:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 41,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "527:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_payable_$",
+                          "typeString": "type(address payable)"
+                        },
+                        "typeName": {
+                          "id": 40,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "527:8:0",
+                          "stateMutability": "payable",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 44,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "527:19:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "519:27:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 46,
+                  "nodeType": "ExpressionStatement",
+                  "src": "519:27:0"
+                }
+              ]
+            },
+            "id": 48,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 37,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "506:2:0"
+            },
+            "returnParameters": {
+              "id": 38,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "509:0:0"
+            },
+            "scope": 150,
+            "src": "495:58:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 81,
+              "nodeType": "Block",
+              "src": "712:267:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 59,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 56,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "730:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 57,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "src": "730:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "hexValue": "30",
+                          "id": 58,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "742:1:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "730:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "56616c7565206d7573742062652067726561746572207468616e20302e",
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "745:31:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_40640ce52840d8f42c4834afdd0d8280841b5786078340bee232ca4e222b70cc",
+                          "typeString": "literal_string \"Value must be greater than 0.\""
+                        },
+                        "value": "Value must be greater than 0."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_40640ce52840d8f42c4834afdd0d8280841b5786078340bee232ca4e222b70cc",
+                          "typeString": "literal_string \"Value must be greater than 0.\""
+                        }
+                      ],
+                      "id": 55,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "722:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 61,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "722:55:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 62,
+                  "nodeType": "ExpressionStatement",
+                  "src": "722:55:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 66,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "803:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 67,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "803:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 63,
+                        "name": "kindPeople",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6,
+                        "src": "787:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                          "typeString": "address[] storage ref"
+                        }
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "src": "787:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_address_$dyn_storage_ptr_$_t_address_$returns$__$bound_to$_t_array$_t_address_$dyn_storage_ptr_$",
+                        "typeString": "function (address[] storage pointer,address)"
+                      }
+                    },
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "787:27:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 69,
+                  "nodeType": "ExpressionStatement",
+                  "src": "787:27:0"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 71,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -4,
+                          "src": "859:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 72,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "src": "859:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 73,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "888:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 74,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "888:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 75,
+                        "name": "_name",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50,
+                        "src": "912:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "expression": {
+                          "id": 76,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "931:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 77,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "src": "931:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 78,
+                        "name": "_message",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "954:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      ],
+                      "id": 70,
+                      "name": "NewCoffeeBought",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 18,
+                      "src": "830:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_address_$_t_string_memory_ptr_$_t_uint256_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (uint256,address,string memory,uint256,string memory)"
+                      }
+                    },
+                    "id": 79,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "830:142:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 80,
+                  "nodeType": "EmitStatement",
+                  "src": "825:147:0"
+                }
+              ]
+            },
+            "functionSelector": "204206e1",
+            "id": 82,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyCoffee",
+            "nameLocation": "616:9:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 53,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "642:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "626:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "626:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52,
+                  "mutability": "mutable",
+                  "name": "_message",
+                  "nameLocation": "665:8:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 82,
+                  "src": "649:24:0",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "649:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "625:49:0"
+            },
+            "returnParameters": {
+              "id": 54,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "712:0:0"
+            },
+            "scope": 150,
+            "src": "607:372:0",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 90,
+              "nodeType": "Block",
+              "src": "1084:41:0",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 87,
+                      "name": "kindPeople",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "1101:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_address_$dyn_storage",
+                        "typeString": "address[] storage ref"
+                      }
+                    },
+                    "id": 88,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "length",
+                    "nodeType": "MemberAccess",
+                    "src": "1101:17:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 86,
+                  "id": 89,
+                  "nodeType": "Return",
+                  "src": "1094:24:0"
+                }
+              ]
+            },
+            "functionSelector": "62ab8cc1",
+            "id": 91,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "howMany",
+            "nameLocation": "1042:7:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1049:2:0"
+            },
+            "returnParameters": {
+              "id": 86,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 85,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 91,
+                  "src": "1075:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 84,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1075:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1074:9:0"
+            },
+            "scope": 150,
+            "src": "1033:92:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 104,
+              "nodeType": "Block",
+              "src": "1238:45:0",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "arguments": [
+                        {
+                          "id": 100,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -28,
+                          "src": "1263:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_BuyMeACoffee_$150",
+                            "typeString": "contract BuyMeACoffee"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_BuyMeACoffee_$150",
+                            "typeString": "contract BuyMeACoffee"
+                          }
+                        ],
+                        "id": 99,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1255:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 98,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1255:7:0",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 101,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1255:13:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 102,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "src": "1255:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 97,
+                  "id": 103,
+                  "nodeType": "Return",
+                  "src": "1248:28:0"
+                }
+              ]
+            },
+            "functionSelector": "c71daccb",
+            "id": 105,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 94,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 93,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36,
+                  "src": "1210:9:0"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1210:9:0"
+              }
+            ],
+            "name": "checkBalance",
+            "nameLocation": "1181:12:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 92,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1193:2:0"
+            },
+            "returnParameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 96,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 105,
+                  "src": "1229:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1229:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1228:9:0"
+            },
+            "scope": 150,
+            "src": "1172:111:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 133,
+              "nodeType": "Block",
+              "src": "1365:160:0",
+              "statements": [
+                {
+                  "assignments": [
+                    111
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 111,
+                      "mutability": "mutable",
+                      "name": "balance",
+                      "nameLocation": "1383:7:0",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 133,
+                      "src": "1375:15:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 110,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1375:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 117,
+                  "initialValue": {
+                    "expression": {
+                      "arguments": [
+                        {
+                          "id": 114,
+                          "name": "this",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -28,
+                          "src": "1401:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_BuyMeACoffee_$150",
+                            "typeString": "contract BuyMeACoffee"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_BuyMeACoffee_$150",
+                            "typeString": "contract BuyMeACoffee"
+                          }
+                        ],
+                        "id": 113,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1393:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 112,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1393:7:0",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 115,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1393:13:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 116,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "src": "1393:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1375:39:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 124,
+                        "name": "balance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 111,
+                        "src": "1453:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "expression": {
+                              "id": 120,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": -15,
+                              "src": "1432:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 121,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "src": "1432:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 119,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1424:8:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_payable_$",
+                            "typeString": "type(address payable)"
+                          },
+                          "typeName": {
+                            "id": 118,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1424:8:0",
+                            "stateMutability": "payable",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 122,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1424:19:0",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 123,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "src": "1424:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 125,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1424:37:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 126,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1424:37:0"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 128,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -4,
+                          "src": "1493:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 129,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "src": "1493:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 130,
+                        "name": "balance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 111,
+                        "src": "1510:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 127,
+                      "name": "WithdrawnCoffees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 24,
+                      "src": "1476:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256)"
+                      }
+                    },
+                    "id": 131,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1476:42:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 132,
+                  "nodeType": "EmitStatement",
+                  "src": "1471:47:0"
+                }
+              ]
+            },
+            "functionSelector": "3ccfd60b",
+            "id": 134,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 108,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 107,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36,
+                  "src": "1355:9:0"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1355:9:0"
+              }
+            ],
+            "name": "withdraw",
+            "nameLocation": "1335:8:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 106,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1343:2:0"
+            },
+            "returnParameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1365:0:0"
+            },
+            "scope": 150,
+            "src": "1326:199:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 148,
+              "nodeType": "Block",
+              "src": "1633:43:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 141,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "1643:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 144,
+                          "name": "_newOwner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 136,
+                          "src": "1659:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 143,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1651:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_payable_$",
+                          "typeString": "type(address payable)"
+                        },
+                        "typeName": {
+                          "id": 142,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1651:8:0",
+                          "stateMutability": "payable",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1651:18:0",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1643:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1643:26:0"
+                }
+              ]
+            },
+            "functionSelector": "a6f9dae1",
+            "id": 149,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 139,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 138,
+                  "name": "onlyOwner",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 36,
+                  "src": "1623:9:0"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1623:9:0"
+              }
+            ],
+            "name": "changeOwner",
+            "nameLocation": "1583:11:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 137,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 136,
+                  "mutability": "mutable",
+                  "name": "_newOwner",
+                  "nameLocation": "1603:9:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 149,
+                  "src": "1595:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 135,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1595:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1594:19:0"
+            },
+            "returnParameters": {
+              "id": 140,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1633:0:0"
+            },
+            "scope": 150,
+            "src": "1574:102:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 151,
+        "src": "58:1620:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1646:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b50600080546001600160a01b0319163317905561053a806100326000396000f3fe6080604052600436106100705760003560e01c80638da5cb5b1161004e5780638da5cb5b146100c3578063a616de21146100fb578063a6f9dae11461011b578063c71daccb1461013b57600080fd5b8063204206e1146100755780633ccfd60b1461008a57806362ab8cc11461009f575b600080fd5b6100886100833660046103b6565b610150565b005b34801561009657600080fd5b50610088610231565b3480156100ab57600080fd5b506001545b6040519081526020015b60405180910390f35b3480156100cf57600080fd5b506000546100e3906001600160a01b031681565b6040516001600160a01b0390911681526020016100ba565b34801561010757600080fd5b506100e3610116366004610422565b6102c7565b34801561012757600080fd5b5061008861013636600461043b565b6102f1565b34801561014757600080fd5b506100b061033d565b600034116101a55760405162461bcd60e51b815260206004820152601d60248201527f56616c7565206d7573742062652067726561746572207468616e20302e00000060448201526064015b60405180910390fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b031916339081179091556040517fa471f5625833d2244d19f4700169d32dfab22150237be735c4f3078077c08f479061022390429088908890349089908990610494565b60405180910390a250505050565b6000546001600160a01b0316331461025b5760405162461bcd60e51b815260040161019c906104d4565b6040514790339082156108fc029083906000818181858888f1935050505015801561028a573d6000803e3d6000fd5b5060408051428152602081018390527fbb050dd3915d12b5b3266ffb8bdd26b8d8cf52d2c5f555cd5fe3553881338666910160405180910390a150565b600181815481106102d757600080fd5b6000918252602090912001546001600160a01b0316905081565b6000546001600160a01b0316331461031b5760405162461bcd60e51b815260040161019c906104d4565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b600080546001600160a01b031633146103685760405162461bcd60e51b815260040161019c906104d4565b504790565b60008083601f84011261037f57600080fd5b50813567ffffffffffffffff81111561039757600080fd5b6020830191508360208285010111156103af57600080fd5b9250929050565b600080600080604085870312156103cc57600080fd5b843567ffffffffffffffff808211156103e457600080fd5b6103f08883890161036d565b9096509450602087013591508082111561040957600080fd5b506104168782880161036d565b95989497509550505050565b60006020828403121561043457600080fd5b5035919050565b60006020828403121561044d57600080fd5b81356001600160a01b038116811461046457600080fd5b9392505050565b81835281816020850137506000828201602090810191909152601f909101601f19169091010190565b8681526080602082015260006104ae60808301878961046b565b85604084015282810360608401526104c781858761046b565b9998505050505050505050565b6020808252601690820152752cb7ba9030b932903737ba103a34329037bbb732b91760511b60408201526060019056fea2646970667358221220f4350f6dd9c00a0cc4a54d8f3956a1bb4daaa78fe24e077738470c2c4b5e23fb64736f6c634300080c0033",
+  "bytecodeSha1": "520c7566d5971ed893b75f7640e7ef3a3543ddb4",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.12+commit.f00d7308"
+  },
+  "contractName": "BuyMeACoffee",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "BuyMeACoffee.buyCoffee": {
+          "8": [
+            730,
+            743,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "BuyMeACoffee.buyCoffee": {
+          "1": [
+            722,
+            777
+          ],
+          "2": [
+            787,
+            814
+          ],
+          "3": [
+            825,
+            972
+          ]
+        },
+        "BuyMeACoffee.changeOwner": {
+          "6": [
+            1643,
+            1669
+          ]
+        },
+        "BuyMeACoffee.checkBalance": {
+          "7": [
+            1248,
+            1276
+          ]
+        },
+        "BuyMeACoffee.howMany": {
+          "0": [
+            1094,
+            1118
+          ]
+        },
+        "BuyMeACoffee.withdraw": {
+          "4": [
+            1424,
+            1461
+          ],
+          "5": [
+            1471,
+            1518
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "6080604052600436106100705760003560e01c80638da5cb5b1161004e5780638da5cb5b146100c3578063a616de21146100fb578063a6f9dae11461011b578063c71daccb1461013b57600080fd5b8063204206e1146100755780633ccfd60b1461008a57806362ab8cc11461009f575b600080fd5b6100886100833660046103b6565b610150565b005b34801561009657600080fd5b50610088610231565b3480156100ab57600080fd5b506001545b6040519081526020015b60405180910390f35b3480156100cf57600080fd5b506000546100e3906001600160a01b031681565b6040516001600160a01b0390911681526020016100ba565b34801561010757600080fd5b506100e3610116366004610422565b6102c7565b34801561012757600080fd5b5061008861013636600461043b565b6102f1565b34801561014757600080fd5b506100b061033d565b600034116101a55760405162461bcd60e51b815260206004820152601d60248201527f56616c7565206d7573742062652067726561746572207468616e20302e00000060448201526064015b60405180910390fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b031916339081179091556040517fa471f5625833d2244d19f4700169d32dfab22150237be735c4f3078077c08f479061022390429088908890349089908990610494565b60405180910390a250505050565b6000546001600160a01b0316331461025b5760405162461bcd60e51b815260040161019c906104d4565b6040514790339082156108fc029083906000818181858888f1935050505015801561028a573d6000803e3d6000fd5b5060408051428152602081018390527fbb050dd3915d12b5b3266ffb8bdd26b8d8cf52d2c5f555cd5fe3553881338666910160405180910390a150565b600181815481106102d757600080fd5b6000918252602090912001546001600160a01b0316905081565b6000546001600160a01b0316331461031b5760405162461bcd60e51b815260040161019c906104d4565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b600080546001600160a01b031633146103685760405162461bcd60e51b815260040161019c906104d4565b504790565b60008083601f84011261037f57600080fd5b50813567ffffffffffffffff81111561039757600080fd5b6020830191508360208285010111156103af57600080fd5b9250929050565b600080600080604085870312156103cc57600080fd5b843567ffffffffffffffff808211156103e457600080fd5b6103f08883890161036d565b9096509450602087013591508082111561040957600080fd5b506104168782880161036d565b95989497509550505050565b60006020828403121561043457600080fd5b5035919050565b60006020828403121561044d57600080fd5b81356001600160a01b038116811461046457600080fd5b9392505050565b81835281816020850137506000828201602090810191909152601f909101601f19169091010190565b8681526080602082015260006104ae60808301878961046b565b85604084015282810360608401526104c781858761046b565b9998505050505050505050565b6020808252601690820152752cb7ba9030b932903737ba103a34329037bbb732b91760511b60408201526060019056fea2646970667358221220f4350f6dd9c00a0cc4a54d8f3956a1bb4daaa78fe24e077738470c2c4b5e23fb64736f6c634300080c0033",
+  "deployedSourceMap": "58:1620:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;607:372;;;;;;:::i;:::-;;:::i;:::-;;1326:199;;;;;;;;;;;;;:::i;1033:92::-;;;;;;;;;;-1:-1:-1;1101:10:0;:17;1033:92;;;1239:25:1;;;1227:2;1212:18;1033:92:0;;;;;;;;86:28;;;;;;;;;;-1:-1:-1;86:28:0;;;;-1:-1:-1;;;;;86:28:0;;;;;;-1:-1:-1;;;;;1455:32:1;;;1437:51;;1425:2;1410:18;86:28:0;1275:219:1;121:27:0;;;;;;;;;;-1:-1:-1;121:27:0;;;;;:::i;:::-;;:::i;1574:102::-;;;;;;;;;;-1:-1:-1;1574:102:0;;;;;:::i;:::-;;:::i;1172:111::-;;;;;;;;;;;;;:::i;607:372::-;742:1;730:9;:13;722:55;;;;-1:-1:-1;;;722:55:0;;2385:2:1;722:55:0;;;2367:21:1;2424:2;2404:18;;;2397:30;2463:31;2443:18;;;2436:59;2512:18;;722:55:0;;;;;;;;;787:10;:27;;;;;;;-1:-1:-1;787:27:0;;;;;;;;-1:-1:-1;;;;;;787:27:0;803:10;787:27;;;;;;830:142;;;;;;859:15;;912:5;;;;931:9;;954:8;;;;830:142;:::i;:::-;;;;;;;;607:372;;;;:::o;1326:199::-;439:5;;-1:-1:-1;;;;;439:5:0;425:10;:19;417:54;;;;-1:-1:-1;;;417:54:0;;;;;;;:::i;:::-;1424:37:::1;::::0;1393:21:::1;::::0;1432:10:::1;::::0;1424:37;::::1;;;::::0;1393:21;;1375:15:::1;1424:37:::0;1375:15;1424:37;1393:21;1432:10;1424:37;::::1;;;;;;;;;;;;;::::0;::::1;;;;;-1:-1:-1::0;1476:42:0::1;::::0;;1493:15:::1;3924:25:1::0;;3980:2;3965:18;;3958:34;;;1476:42:0::1;::::0;3897:18:1;1476:42:0::1;;;;;;;1365:160;1326:199::o:0;121:27::-;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;121:27:0;;-1:-1:-1;121:27:0;:::o;1574:102::-;439:5;;-1:-1:-1;;;;;439:5:0;425:10;:19;417:54;;;;-1:-1:-1;;;417:54:0;;;;;;;:::i;:::-;1643:5:::1;:26:::0;;-1:-1:-1;;;;;;1643:26:0::1;-1:-1:-1::0;;;;;1643:26:0;;;::::1;::::0;;;::::1;::::0;;1574:102::o;1172:111::-;1229:7;439:5;;-1:-1:-1;;;;;439:5:0;425:10;:19;417:54;;;;-1:-1:-1;;;417:54:0;;;;;;;:::i;:::-;-1:-1:-1;1255:21:0::1;1172:111:::0;:::o;14:348:1:-;66:8;76:6;130:3;123:4;115:6;111:17;107:27;97:55;;148:1;145;138:12;97:55;-1:-1:-1;171:20:1;;214:18;203:30;;200:50;;;246:1;243;236:12;200:50;283:4;275:6;271:17;259:29;;335:3;328:4;319:6;311;307:19;303:30;300:39;297:59;;;352:1;349;342:12;297:59;14:348;;;;;:::o;367:721::-;459:6;467;475;483;536:2;524:9;515:7;511:23;507:32;504:52;;;552:1;549;542:12;504:52;592:9;579:23;621:18;662:2;654:6;651:14;648:34;;;678:1;675;668:12;648:34;717:59;768:7;759:6;748:9;744:22;717:59;:::i;:::-;795:8;;-1:-1:-1;691:85:1;-1:-1:-1;883:2:1;868:18;;855:32;;-1:-1:-1;899:16:1;;;896:36;;;928:1;925;918:12;896:36;;967:61;1020:7;1009:8;998:9;994:24;967:61;:::i;:::-;367:721;;;;-1:-1:-1;1047:8:1;-1:-1:-1;;;;367:721:1:o;1499:180::-;1558:6;1611:2;1599:9;1590:7;1586:23;1582:32;1579:52;;;1627:1;1624;1617:12;1579:52;-1:-1:-1;1650:23:1;;1499:180;-1:-1:-1;1499:180:1:o;1892:286::-;1951:6;2004:2;1992:9;1983:7;1979:23;1975:32;1972:52;;;2020:1;2017;2010:12;1972:52;2046:23;;-1:-1:-1;;;;;2098:31:1;;2088:42;;2078:70;;2144:1;2141;2134:12;2078:70;2167:5;1892:286;-1:-1:-1;;;1892:286:1:o;2541:267::-;2630:6;2625:3;2618:19;2682:6;2675:5;2668:4;2663:3;2659:14;2646:43;-1:-1:-1;2734:1:1;2709:16;;;2727:4;2705:27;;;2698:38;;;;2790:2;2769:15;;;-1:-1:-1;;2765:29:1;2756:39;;;2752:50;;2541:267::o;2813:581::-;3086:6;3075:9;3068:25;3129:3;3124:2;3113:9;3109:18;3102:31;3049:4;3156:63;3214:3;3203:9;3199:19;3191:6;3183;3156:63;:::i;:::-;3255:6;3250:2;3239:9;3235:18;3228:34;3310:9;3302:6;3298:22;3293:2;3282:9;3278:18;3271:50;3338;3381:6;3373;3365;3338:50;:::i;:::-;3330:58;2813:581;-1:-1:-1;;;;;;;;;2813:581:1:o;3399:346::-;3601:2;3583:21;;;3640:2;3620:18;;;3613:30;-1:-1:-1;;;3674:2:1;3659:18;;3652:52;3736:2;3721:18;;3399:346::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    58,
+    1678
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x70 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x8DA5CB5B GT PUSH2 0x4E JUMPI DUP1 PUSH4 0x8DA5CB5B EQ PUSH2 0xC3 JUMPI DUP1 PUSH4 0xA616DE21 EQ PUSH2 0xFB JUMPI DUP1 PUSH4 0xA6F9DAE1 EQ PUSH2 0x11B JUMPI DUP1 PUSH4 0xC71DACCB EQ PUSH2 0x13B JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 PUSH4 0x204206E1 EQ PUSH2 0x75 JUMPI DUP1 PUSH4 0x3CCFD60B EQ PUSH2 0x8A JUMPI DUP1 PUSH4 0x62AB8CC1 EQ PUSH2 0x9F JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x88 PUSH2 0x83 CALLDATASIZE PUSH1 0x4 PUSH2 0x3B6 JUMP JUMPDEST PUSH2 0x150 JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x96 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x88 PUSH2 0x231 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xAB JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x1 SLOAD JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0xCF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x0 SLOAD PUSH2 0xE3 SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0xBA JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x107 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xE3 PUSH2 0x116 CALLDATASIZE PUSH1 0x4 PUSH2 0x422 JUMP JUMPDEST PUSH2 0x2C7 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x127 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x88 PUSH2 0x136 CALLDATASIZE PUSH1 0x4 PUSH2 0x43B JUMP JUMPDEST PUSH2 0x2F1 JUMP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x147 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0xB0 PUSH2 0x33D JUMP JUMPDEST PUSH1 0x0 CALLVALUE GT PUSH2 0x1A5 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1D PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x56616C7565206D7573742062652067726561746572207468616E20302E000000 PUSH1 0x44 DUP3 ADD MSTORE PUSH1 0x64 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x1 DUP1 SLOAD DUP1 DUP3 ADD DUP3 SSTORE PUSH1 0x0 SWAP2 SWAP1 SWAP2 MSTORE PUSH32 0xB10E2D527612073B26EECDFD717E6A320CF44B4AFAC2B0732D9FCBE2B7FA0CF6 ADD DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND CALLER SWAP1 DUP2 OR SWAP1 SWAP2 SSTORE PUSH1 0x40 MLOAD PUSH32 0xA471F5625833D2244D19F4700169D32DFAB22150237BE735C4F3078077C08F47 SWAP1 PUSH2 0x223 SWAP1 TIMESTAMP SWAP1 DUP9 SWAP1 DUP9 SWAP1 CALLVALUE SWAP1 DUP10 SWAP1 DUP10 SWAP1 PUSH2 0x494 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG2 POP POP POP POP JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x25B JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x4 ADD PUSH2 0x19C SWAP1 PUSH2 0x4D4 JUMP JUMPDEST PUSH1 0x40 MLOAD SELFBALANCE SWAP1 CALLER SWAP1 DUP3 ISZERO PUSH2 0x8FC MUL SWAP1 DUP4 SWAP1 PUSH1 0x0 DUP2 DUP2 DUP2 DUP6 DUP9 DUP9 CALL SWAP4 POP POP POP POP ISZERO DUP1 ISZERO PUSH2 0x28A JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP PUSH1 0x40 DUP1 MLOAD TIMESTAMP DUP2 MSTORE PUSH1 0x20 DUP2 ADD DUP4 SWAP1 MSTORE PUSH32 0xBB050DD3915D12B5B3266FFB8BDD26B8D8CF52D2C5F555CD5FE3553881338666 SWAP2 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 POP JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SLOAD DUP2 LT PUSH2 0x2D7 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 SWAP2 DUP3 MSTORE PUSH1 0x20 SWAP1 SWAP2 KECCAK256 ADD SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND SWAP1 POP DUP2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x31B JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x4 ADD PUSH2 0x19C SWAP1 PUSH2 0x4D4 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP3 SWAP1 SWAP3 AND SWAP2 SWAP1 SWAP2 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0x368 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x4 ADD PUSH2 0x19C SWAP1 PUSH2 0x4D4 JUMP JUMPDEST POP SELFBALANCE SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP1 DUP4 PUSH1 0x1F DUP5 ADD SLT PUSH2 0x37F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP DUP2 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP2 GT ISZERO PUSH2 0x397 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x20 DUP4 ADD SWAP2 POP DUP4 PUSH1 0x20 DUP3 DUP6 ADD ADD GT ISZERO PUSH2 0x3AF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP3 POP SWAP3 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 DUP1 PUSH1 0x40 DUP6 DUP8 SUB SLT ISZERO PUSH2 0x3CC JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP5 CALLDATALOAD PUSH8 0xFFFFFFFFFFFFFFFF DUP1 DUP3 GT ISZERO PUSH2 0x3E4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x3F0 DUP9 DUP4 DUP10 ADD PUSH2 0x36D JUMP JUMPDEST SWAP1 SWAP7 POP SWAP5 POP PUSH1 0x20 DUP8 ADD CALLDATALOAD SWAP2 POP DUP1 DUP3 GT ISZERO PUSH2 0x409 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x416 DUP8 DUP3 DUP9 ADD PUSH2 0x36D JUMP JUMPDEST SWAP6 SWAP9 SWAP5 SWAP8 POP SWAP6 POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x434 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x44D JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP2 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x464 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST DUP2 DUP4 MSTORE DUP2 DUP2 PUSH1 0x20 DUP6 ADD CALLDATACOPY POP PUSH1 0x0 DUP3 DUP3 ADD PUSH1 0x20 SWAP1 DUP2 ADD SWAP2 SWAP1 SWAP2 MSTORE PUSH1 0x1F SWAP1 SWAP2 ADD PUSH1 0x1F NOT AND SWAP1 SWAP2 ADD ADD SWAP1 JUMP JUMPDEST DUP7 DUP2 MSTORE PUSH1 0x80 PUSH1 0x20 DUP3 ADD MSTORE PUSH1 0x0 PUSH2 0x4AE PUSH1 0x80 DUP4 ADD DUP8 DUP10 PUSH2 0x46B JUMP JUMPDEST DUP6 PUSH1 0x40 DUP5 ADD MSTORE DUP3 DUP2 SUB PUSH1 0x60 DUP5 ADD MSTORE PUSH2 0x4C7 DUP2 DUP6 DUP8 PUSH2 0x46B JUMP JUMPDEST SWAP10 SWAP9 POP POP POP POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x20 DUP1 DUP3 MSTORE PUSH1 0x16 SWAP1 DUP3 ADD MSTORE PUSH22 0x2CB7BA9030B932903737BA103A34329037BBB732B917 PUSH1 0x51 SHL PUSH1 0x40 DUP3 ADD MSTORE PUSH1 0x60 ADD SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DELEGATECALL CALLDATALOAD 0xF PUSH14 0xD9C00A0CC4A54D8F3956A1BB4DAA 0xA7 DUP16 0xE2 0x4E SMOD PUSH24 0x38470C2C4B5E23FB64736F6C634300080C00330000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x70"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x8DA5CB5B"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4E"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x8DA5CB5B"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC3"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA616DE21"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xFB"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA6F9DAE1"
+    },
+    "58": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "59": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x11B"
+    },
+    "62": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "63": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xC71DACCB"
+    },
+    "69": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "70": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x13B"
+    },
+    "73": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "74": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "78": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "79": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "80": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x204206E1"
+    },
+    "85": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x75"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "91": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x3CCFD60B"
+    },
+    "96": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "97": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8A"
+    },
+    "100": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "101": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "102": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x62AB8CC1"
+    },
+    "107": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "108": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x9F"
+    },
+    "111": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "112": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "113": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "115": {
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "116": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        58,
+        1678
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "117": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "118": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "121": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x83"
+    },
+    "124": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "125": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "127": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3B6"
+    },
+    "130": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "jump": "i",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "131": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "132": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x150"
+    },
+    "135": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "jump": "i",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "136": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "137": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "138": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "139": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "140": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "141": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "142": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x96"
+    },
+    "145": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "146": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "148": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "149": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "150": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "151": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "152": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "155": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x231"
+    },
+    "158": {
+      "fn": "BuyMeACoffee.withdraw",
+      "jump": "i",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "159": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "160": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "161": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "162": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "163": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xAB"
+    },
+    "166": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "167": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "169": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "170": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "171": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "172": {
+      "op": "POP"
+    },
+    "173": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1101,
+        1111
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "175": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1101,
+        1118
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "176": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "177": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "179": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "180": {
+      "op": "SWAP1"
+    },
+    "181": {
+      "op": "DUP2"
+    },
+    "182": {
+      "op": "MSTORE"
+    },
+    "183": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "185": {
+      "op": "ADD"
+    },
+    "186": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "187": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "189": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "190": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "191": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "192": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "193": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "194": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        1033,
+        1125
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "195": {
+      "offset": [
+        86,
+        114
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "196": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "197": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "198": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "199": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xCF"
+    },
+    "202": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "203": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "205": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "206": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "207": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "208": {
+      "op": "POP"
+    },
+    "209": {
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "211": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "212": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE3"
+    },
+    "215": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "216": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "218": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "220": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "222": {
+      "op": "SHL"
+    },
+    "223": {
+      "op": "SUB"
+    },
+    "224": {
+      "offset": [
+        86,
+        114
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "225": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "226": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "227": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "228": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "230": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        86,
+        114
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "231": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "233": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "235": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "237": {
+      "op": "SHL"
+    },
+    "238": {
+      "op": "SUB"
+    },
+    "239": {
+      "op": "SWAP1"
+    },
+    "240": {
+      "op": "SWAP2"
+    },
+    "241": {
+      "op": "AND"
+    },
+    "242": {
+      "op": "DUP2"
+    },
+    "243": {
+      "op": "MSTORE"
+    },
+    "244": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "246": {
+      "op": "ADD"
+    },
+    "247": {
+      "offset": [
+        86,
+        114
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xBA"
+    },
+    "250": {
+      "op": "JUMP"
+    },
+    "251": {
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "252": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "253": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "254": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "255": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x107"
+    },
+    "258": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "259": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "261": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "262": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "263": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "264": {
+      "op": "POP"
+    },
+    "265": {
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE3"
+    },
+    "268": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x116"
+    },
+    "271": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "272": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "274": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x422"
+    },
+    "277": {
+      "fn": "BuyMeACoffee.howMany",
+      "jump": "i",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "278": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "279": {
+      "fn": "BuyMeACoffee.howMany",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2C7"
+    },
+    "282": {
+      "fn": "BuyMeACoffee.howMany",
+      "jump": "i",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "283": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "284": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "285": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "286": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "287": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x127"
+    },
+    "290": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "291": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "293": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "294": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "295": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "296": {
+      "op": "POP"
+    },
+    "297": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "300": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x136"
+    },
+    "303": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "304": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "306": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x43B"
+    },
+    "309": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "jump": "i",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "310": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "311": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2F1"
+    },
+    "314": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "jump": "i",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "315": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "316": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "317": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "318": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "319": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x147"
+    },
+    "322": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "323": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "325": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "326": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "327": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "328": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "329": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB0"
+    },
+    "332": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x33D"
+    },
+    "335": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "jump": "i",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "336": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "337": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        742,
+        743
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "339": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        730,
+        739
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "340": {
+      "branch": 8,
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        730,
+        743
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "341": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A5"
+    },
+    "344": {
+      "branch": 8,
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "345": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "347": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "348": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "352": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "354": {
+      "op": "SHL"
+    },
+    "355": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "356": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "357": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "359": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "361": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "362": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "363": {
+      "op": "MSTORE"
+    },
+    "364": {
+      "op": "PUSH1",
+      "value": "0x1D"
+    },
+    "366": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "368": {
+      "op": "DUP3"
+    },
+    "369": {
+      "op": "ADD"
+    },
+    "370": {
+      "op": "MSTORE"
+    },
+    "371": {
+      "op": "PUSH32",
+      "value": "0x56616C7565206D7573742062652067726561746572207468616E20302E000000"
+    },
+    "404": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "406": {
+      "op": "DUP3"
+    },
+    "407": {
+      "op": "ADD"
+    },
+    "408": {
+      "op": "MSTORE"
+    },
+    "409": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "411": {
+      "op": "ADD"
+    },
+    "412": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "413": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "415": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "416": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "417": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "418": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "419": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "420": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "0"
+    },
+    "421": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        722,
+        777
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "422": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        797
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 2,
+      "value": "0x1"
+    },
+    "424": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "425": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "426": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "427": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "428": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "429": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "430": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "431": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "433": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "434": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "435": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "436": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "437": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0xB10E2D527612073B26EECDFD717E6A320CF44B4AFAC2B0732D9FCBE2B7FA0CF6"
+    },
+    "470": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "471": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "472": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "473": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "475": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "477": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "479": {
+      "op": "SHL"
+    },
+    "480": {
+      "op": "SUB"
+    },
+    "481": {
+      "op": "NOT"
+    },
+    "482": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "483": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        803,
+        813
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "484": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "485": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "486": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "487": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "488": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "489": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        787,
+        814
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "490": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x40"
+    },
+    "492": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "493": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0xA471F5625833D2244D19F4700169D32DFAB22150237BE735C4F3078077C08F47"
+    },
+    "526": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "527": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x223"
+    },
+    "530": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "531": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        859,
+        874
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "532": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        859,
+        874
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "533": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        912,
+        917
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "534": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        912,
+        917
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "535": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        912,
+        917
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "536": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        912,
+        917
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "537": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        931,
+        940
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "538": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        931,
+        940
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "539": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        954,
+        962
+      ],
+      "op": "DUP10",
+      "path": "0"
+    },
+    "540": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        954,
+        962
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "541": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        954,
+        962
+      ],
+      "op": "DUP10",
+      "path": "0"
+    },
+    "542": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        954,
+        962
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "543": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x494"
+    },
+    "546": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "jump": "i",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "547": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "548": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "550": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "551": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "552": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "553": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "554": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "555": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        830,
+        972
+      ],
+      "op": "LOG2",
+      "path": "0"
+    },
+    "556": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "557": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "558": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "559": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "560": {
+      "fn": "BuyMeACoffee.buyCoffee",
+      "jump": "o",
+      "offset": [
+        607,
+        979
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "561": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "562": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "564": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        439,
+        444
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "565": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "567": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "569": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "571": {
+      "op": "SHL"
+    },
+    "572": {
+      "op": "SUB"
+    },
+    "573": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "574": {
+      "offset": [
+        425,
+        435
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "575": {
+      "offset": [
+        425,
+        444
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "576": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x25B"
+    },
+    "579": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "580": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "582": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "583": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "587": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "589": {
+      "op": "SHL"
+    },
+    "590": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "591": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "592": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "594": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "595": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x19C"
+    },
+    "598": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "599": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4D4"
+    },
+    "602": {
+      "fn": "BuyMeACoffee.withdraw",
+      "jump": "i",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "603": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "604": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x40"
+    },
+    "606": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "607": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1393,
+        1414
+      ],
+      "op": "SELFBALANCE",
+      "path": "0"
+    },
+    "608": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1393,
+        1414
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "609": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1432,
+        1442
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "610": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1432,
+        1442
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "611": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "612": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "613": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8FC"
+    },
+    "616": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "617": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "618": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1393,
+        1414
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "619": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1393,
+        1414
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "620": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1375,
+        1390
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "622": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "623": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1375,
+        1390
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "624": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "625": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1393,
+        1414
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "626": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1432,
+        1442
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "627": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP9",
+      "path": "0"
+    },
+    "628": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "629": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "630": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "631": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "632": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "633": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "634": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "635": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "636": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "637": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x28A"
+    },
+    "640": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "641": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "642": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "644": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "645": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "0"
+    },
+    "646": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "0"
+    },
+    "647": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "649": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "650": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1424,
+        1461
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "651": {
+      "op": "POP"
+    },
+    "652": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 5,
+      "value": "0x40"
+    },
+    "654": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "655": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "656": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1493,
+        1508
+      ],
+      "op": "TIMESTAMP",
+      "path": "0"
+    },
+    "657": {
+      "op": "DUP2"
+    },
+    "658": {
+      "op": "MSTORE"
+    },
+    "659": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "661": {
+      "op": "DUP2"
+    },
+    "662": {
+      "op": "ADD"
+    },
+    "663": {
+      "op": "DUP4"
+    },
+    "664": {
+      "op": "SWAP1"
+    },
+    "665": {
+      "op": "MSTORE"
+    },
+    "666": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "PUSH32",
+      "path": "0",
+      "value": "0xBB050DD3915D12B5B3266FFB8BDD26B8D8CF52D2C5F555CD5FE3553881338666"
+    },
+    "699": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "700": {
+      "op": "ADD"
+    },
+    "701": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "703": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "704": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "705": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "706": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "707": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "708": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1476,
+        1518
+      ],
+      "op": "LOG1",
+      "path": "0"
+    },
+    "709": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        1365,
+        1525
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "710": {
+      "fn": "BuyMeACoffee.withdraw",
+      "jump": "o",
+      "offset": [
+        1326,
+        1525
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "711": {
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "712": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "714": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "715": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "716": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "717": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "718": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "719": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x2D7"
+    },
+    "722": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "723": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "725": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "726": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "727": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "728": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "730": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "731": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "732": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "733": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "735": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "736": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "737": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "738": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "739": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "740": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "742": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "744": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "746": {
+      "op": "SHL"
+    },
+    "747": {
+      "op": "SUB"
+    },
+    "748": {
+      "offset": [
+        121,
+        148
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "749": {
+      "fn": "BuyMeACoffee.withdraw",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "750": {
+      "op": "POP"
+    },
+    "751": {
+      "offset": [
+        121,
+        148
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "752": {
+      "fn": "BuyMeACoffee.withdraw",
+      "jump": "o",
+      "offset": [
+        121,
+        148
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "753": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "754": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "756": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        439,
+        444
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "757": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "759": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "761": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "763": {
+      "op": "SHL"
+    },
+    "764": {
+      "op": "SUB"
+    },
+    "765": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "766": {
+      "offset": [
+        425,
+        435
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "767": {
+      "offset": [
+        425,
+        444
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "768": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x31B"
+    },
+    "771": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "772": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "774": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "775": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "779": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "781": {
+      "op": "SHL"
+    },
+    "782": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "783": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "784": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "786": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "787": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x19C"
+    },
+    "790": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "791": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4D4"
+    },
+    "794": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "jump": "i",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "795": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "796": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1648
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 6,
+      "value": "0x0"
+    },
+    "798": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "799": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "800": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "802": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "804": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "806": {
+      "op": "SHL"
+    },
+    "807": {
+      "op": "SUB"
+    },
+    "808": {
+      "op": "NOT"
+    },
+    "809": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "810": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "812": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "814": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "816": {
+      "op": "SHL"
+    },
+    "817": {
+      "op": "SUB"
+    },
+    "818": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "819": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "820": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "821": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "822": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "823": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "824": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "825": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "OR",
+      "path": "0"
+    },
+    "826": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "827": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "offset": [
+        1643,
+        1669
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "828": {
+      "fn": "BuyMeACoffee.changeOwner",
+      "jump": "o",
+      "offset": [
+        1574,
+        1676
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "829": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "830": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1229,
+        1236
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "832": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "833": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        439,
+        444
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "834": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "836": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "838": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "840": {
+      "op": "SHL"
+    },
+    "841": {
+      "op": "SUB"
+    },
+    "842": {
+      "offset": [
+        439,
+        444
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "843": {
+      "offset": [
+        425,
+        435
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "844": {
+      "offset": [
+        425,
+        444
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "845": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x368"
+    },
+    "848": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "849": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "851": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "852": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "856": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "858": {
+      "op": "SHL"
+    },
+    "859": {
+      "offset": [
+        417,
+        471
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "860": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "861": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "863": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "864": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x19C"
+    },
+    "867": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "868": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4D4"
+    },
+    "871": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "jump": "i",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "872": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        417,
+        471
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "873": {
+      "op": "POP"
+    },
+    "874": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1255,
+        1276
+      ],
+      "op": "SELFBALANCE",
+      "path": "0",
+      "statement": 7
+    },
+    "875": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "876": {
+      "fn": "BuyMeACoffee.checkBalance",
+      "jump": "o",
+      "offset": [
+        1172,
+        1283
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "877": {
+      "op": "JUMPDEST"
+    },
+    "878": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "880": {
+      "op": "DUP1"
+    },
+    "881": {
+      "op": "DUP4"
+    },
+    "882": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "884": {
+      "op": "DUP5"
+    },
+    "885": {
+      "op": "ADD"
+    },
+    "886": {
+      "op": "SLT"
+    },
+    "887": {
+      "op": "PUSH2",
+      "value": "0x37F"
+    },
+    "890": {
+      "op": "JUMPI"
+    },
+    "891": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "893": {
+      "op": "DUP1"
+    },
+    "894": {
+      "op": "REVERT"
+    },
+    "895": {
+      "op": "JUMPDEST"
+    },
+    "896": {
+      "op": "POP"
+    },
+    "897": {
+      "op": "DUP2"
+    },
+    "898": {
+      "op": "CALLDATALOAD"
+    },
+    "899": {
+      "op": "PUSH8",
+      "value": "0xFFFFFFFFFFFFFFFF"
+    },
+    "908": {
+      "op": "DUP2"
+    },
+    "909": {
+      "op": "GT"
+    },
+    "910": {
+      "op": "ISZERO"
+    },
+    "911": {
+      "op": "PUSH2",
+      "value": "0x397"
+    },
+    "914": {
+      "op": "JUMPI"
+    },
+    "915": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "917": {
+      "op": "DUP1"
+    },
+    "918": {
+      "op": "REVERT"
+    },
+    "919": {
+      "op": "JUMPDEST"
+    },
+    "920": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "922": {
+      "op": "DUP4"
+    },
+    "923": {
+      "op": "ADD"
+    },
+    "924": {
+      "op": "SWAP2"
+    },
+    "925": {
+      "op": "POP"
+    },
+    "926": {
+      "op": "DUP4"
+    },
+    "927": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "929": {
+      "op": "DUP3"
+    },
+    "930": {
+      "op": "DUP6"
+    },
+    "931": {
+      "op": "ADD"
+    },
+    "932": {
+      "op": "ADD"
+    },
+    "933": {
+      "op": "GT"
+    },
+    "934": {
+      "op": "ISZERO"
+    },
+    "935": {
+      "op": "PUSH2",
+      "value": "0x3AF"
+    },
+    "938": {
+      "op": "JUMPI"
+    },
+    "939": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "941": {
+      "op": "DUP1"
+    },
+    "942": {
+      "op": "REVERT"
+    },
+    "943": {
+      "op": "JUMPDEST"
+    },
+    "944": {
+      "op": "SWAP3"
+    },
+    "945": {
+      "op": "POP"
+    },
+    "946": {
+      "op": "SWAP3"
+    },
+    "947": {
+      "op": "SWAP1"
+    },
+    "948": {
+      "op": "POP"
+    },
+    "949": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "950": {
+      "op": "JUMPDEST"
+    },
+    "951": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "953": {
+      "op": "DUP1"
+    },
+    "954": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "956": {
+      "op": "DUP1"
+    },
+    "957": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "959": {
+      "op": "DUP6"
+    },
+    "960": {
+      "op": "DUP8"
+    },
+    "961": {
+      "op": "SUB"
+    },
+    "962": {
+      "op": "SLT"
+    },
+    "963": {
+      "op": "ISZERO"
+    },
+    "964": {
+      "op": "PUSH2",
+      "value": "0x3CC"
+    },
+    "967": {
+      "op": "JUMPI"
+    },
+    "968": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "970": {
+      "op": "DUP1"
+    },
+    "971": {
+      "op": "REVERT"
+    },
+    "972": {
+      "op": "JUMPDEST"
+    },
+    "973": {
+      "op": "DUP5"
+    },
+    "974": {
+      "op": "CALLDATALOAD"
+    },
+    "975": {
+      "op": "PUSH8",
+      "value": "0xFFFFFFFFFFFFFFFF"
+    },
+    "984": {
+      "op": "DUP1"
+    },
+    "985": {
+      "op": "DUP3"
+    },
+    "986": {
+      "op": "GT"
+    },
+    "987": {
+      "op": "ISZERO"
+    },
+    "988": {
+      "op": "PUSH2",
+      "value": "0x3E4"
+    },
+    "991": {
+      "op": "JUMPI"
+    },
+    "992": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "994": {
+      "op": "DUP1"
+    },
+    "995": {
+      "op": "REVERT"
+    },
+    "996": {
+      "op": "JUMPDEST"
+    },
+    "997": {
+      "op": "PUSH2",
+      "value": "0x3F0"
+    },
+    "1000": {
+      "op": "DUP9"
+    },
+    "1001": {
+      "op": "DUP4"
+    },
+    "1002": {
+      "op": "DUP10"
+    },
+    "1003": {
+      "op": "ADD"
+    },
+    "1004": {
+      "op": "PUSH2",
+      "value": "0x36D"
+    },
+    "1007": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1008": {
+      "op": "JUMPDEST"
+    },
+    "1009": {
+      "op": "SWAP1"
+    },
+    "1010": {
+      "op": "SWAP7"
+    },
+    "1011": {
+      "op": "POP"
+    },
+    "1012": {
+      "op": "SWAP5"
+    },
+    "1013": {
+      "op": "POP"
+    },
+    "1014": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1016": {
+      "op": "DUP8"
+    },
+    "1017": {
+      "op": "ADD"
+    },
+    "1018": {
+      "op": "CALLDATALOAD"
+    },
+    "1019": {
+      "op": "SWAP2"
+    },
+    "1020": {
+      "op": "POP"
+    },
+    "1021": {
+      "op": "DUP1"
+    },
+    "1022": {
+      "op": "DUP3"
+    },
+    "1023": {
+      "op": "GT"
+    },
+    "1024": {
+      "op": "ISZERO"
+    },
+    "1025": {
+      "op": "PUSH2",
+      "value": "0x409"
+    },
+    "1028": {
+      "op": "JUMPI"
+    },
+    "1029": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1031": {
+      "op": "DUP1"
+    },
+    "1032": {
+      "op": "REVERT"
+    },
+    "1033": {
+      "op": "JUMPDEST"
+    },
+    "1034": {
+      "op": "POP"
+    },
+    "1035": {
+      "op": "PUSH2",
+      "value": "0x416"
+    },
+    "1038": {
+      "op": "DUP8"
+    },
+    "1039": {
+      "op": "DUP3"
+    },
+    "1040": {
+      "op": "DUP9"
+    },
+    "1041": {
+      "op": "ADD"
+    },
+    "1042": {
+      "op": "PUSH2",
+      "value": "0x36D"
+    },
+    "1045": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1046": {
+      "op": "JUMPDEST"
+    },
+    "1047": {
+      "op": "SWAP6"
+    },
+    "1048": {
+      "op": "SWAP9"
+    },
+    "1049": {
+      "op": "SWAP5"
+    },
+    "1050": {
+      "op": "SWAP8"
+    },
+    "1051": {
+      "op": "POP"
+    },
+    "1052": {
+      "op": "SWAP6"
+    },
+    "1053": {
+      "op": "POP"
+    },
+    "1054": {
+      "op": "POP"
+    },
+    "1055": {
+      "op": "POP"
+    },
+    "1056": {
+      "op": "POP"
+    },
+    "1057": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1058": {
+      "op": "JUMPDEST"
+    },
+    "1059": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1061": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1063": {
+      "op": "DUP3"
+    },
+    "1064": {
+      "op": "DUP5"
+    },
+    "1065": {
+      "op": "SUB"
+    },
+    "1066": {
+      "op": "SLT"
+    },
+    "1067": {
+      "op": "ISZERO"
+    },
+    "1068": {
+      "op": "PUSH2",
+      "value": "0x434"
+    },
+    "1071": {
+      "op": "JUMPI"
+    },
+    "1072": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1074": {
+      "op": "DUP1"
+    },
+    "1075": {
+      "op": "REVERT"
+    },
+    "1076": {
+      "op": "JUMPDEST"
+    },
+    "1077": {
+      "op": "POP"
+    },
+    "1078": {
+      "op": "CALLDATALOAD"
+    },
+    "1079": {
+      "op": "SWAP2"
+    },
+    "1080": {
+      "op": "SWAP1"
+    },
+    "1081": {
+      "op": "POP"
+    },
+    "1082": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1083": {
+      "op": "JUMPDEST"
+    },
+    "1084": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1086": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1088": {
+      "op": "DUP3"
+    },
+    "1089": {
+      "op": "DUP5"
+    },
+    "1090": {
+      "op": "SUB"
+    },
+    "1091": {
+      "op": "SLT"
+    },
+    "1092": {
+      "op": "ISZERO"
+    },
+    "1093": {
+      "op": "PUSH2",
+      "value": "0x44D"
+    },
+    "1096": {
+      "op": "JUMPI"
+    },
+    "1097": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1099": {
+      "op": "DUP1"
+    },
+    "1100": {
+      "op": "REVERT"
+    },
+    "1101": {
+      "op": "JUMPDEST"
+    },
+    "1102": {
+      "op": "DUP2"
+    },
+    "1103": {
+      "op": "CALLDATALOAD"
+    },
+    "1104": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1106": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1108": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "1110": {
+      "op": "SHL"
+    },
+    "1111": {
+      "op": "SUB"
+    },
+    "1112": {
+      "op": "DUP2"
+    },
+    "1113": {
+      "op": "AND"
+    },
+    "1114": {
+      "op": "DUP2"
+    },
+    "1115": {
+      "op": "EQ"
+    },
+    "1116": {
+      "op": "PUSH2",
+      "value": "0x464"
+    },
+    "1119": {
+      "op": "JUMPI"
+    },
+    "1120": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1122": {
+      "op": "DUP1"
+    },
+    "1123": {
+      "op": "REVERT"
+    },
+    "1124": {
+      "op": "JUMPDEST"
+    },
+    "1125": {
+      "op": "SWAP4"
+    },
+    "1126": {
+      "op": "SWAP3"
+    },
+    "1127": {
+      "op": "POP"
+    },
+    "1128": {
+      "op": "POP"
+    },
+    "1129": {
+      "op": "POP"
+    },
+    "1130": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1131": {
+      "op": "JUMPDEST"
+    },
+    "1132": {
+      "op": "DUP2"
+    },
+    "1133": {
+      "op": "DUP4"
+    },
+    "1134": {
+      "op": "MSTORE"
+    },
+    "1135": {
+      "op": "DUP2"
+    },
+    "1136": {
+      "op": "DUP2"
+    },
+    "1137": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1139": {
+      "op": "DUP6"
+    },
+    "1140": {
+      "op": "ADD"
+    },
+    "1141": {
+      "op": "CALLDATACOPY"
+    },
+    "1142": {
+      "op": "POP"
+    },
+    "1143": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1145": {
+      "op": "DUP3"
+    },
+    "1146": {
+      "op": "DUP3"
+    },
+    "1147": {
+      "op": "ADD"
+    },
+    "1148": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1150": {
+      "op": "SWAP1"
+    },
+    "1151": {
+      "op": "DUP2"
+    },
+    "1152": {
+      "op": "ADD"
+    },
+    "1153": {
+      "op": "SWAP2"
+    },
+    "1154": {
+      "op": "SWAP1"
+    },
+    "1155": {
+      "op": "SWAP2"
+    },
+    "1156": {
+      "op": "MSTORE"
+    },
+    "1157": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1159": {
+      "op": "SWAP1"
+    },
+    "1160": {
+      "op": "SWAP2"
+    },
+    "1161": {
+      "op": "ADD"
+    },
+    "1162": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "1164": {
+      "op": "NOT"
+    },
+    "1165": {
+      "op": "AND"
+    },
+    "1166": {
+      "op": "SWAP1"
+    },
+    "1167": {
+      "op": "SWAP2"
+    },
+    "1168": {
+      "op": "ADD"
+    },
+    "1169": {
+      "op": "ADD"
+    },
+    "1170": {
+      "op": "SWAP1"
+    },
+    "1171": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1172": {
+      "op": "JUMPDEST"
+    },
+    "1173": {
+      "op": "DUP7"
+    },
+    "1174": {
+      "op": "DUP2"
+    },
+    "1175": {
+      "op": "MSTORE"
+    },
+    "1176": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1178": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1180": {
+      "op": "DUP3"
+    },
+    "1181": {
+      "op": "ADD"
+    },
+    "1182": {
+      "op": "MSTORE"
+    },
+    "1183": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1185": {
+      "op": "PUSH2",
+      "value": "0x4AE"
+    },
+    "1188": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "1190": {
+      "op": "DUP4"
+    },
+    "1191": {
+      "op": "ADD"
+    },
+    "1192": {
+      "op": "DUP8"
+    },
+    "1193": {
+      "op": "DUP10"
+    },
+    "1194": {
+      "op": "PUSH2",
+      "value": "0x46B"
+    },
+    "1197": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1198": {
+      "op": "JUMPDEST"
+    },
+    "1199": {
+      "op": "DUP6"
+    },
+    "1200": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1202": {
+      "op": "DUP5"
+    },
+    "1203": {
+      "op": "ADD"
+    },
+    "1204": {
+      "op": "MSTORE"
+    },
+    "1205": {
+      "op": "DUP3"
+    },
+    "1206": {
+      "op": "DUP2"
+    },
+    "1207": {
+      "op": "SUB"
+    },
+    "1208": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "1210": {
+      "op": "DUP5"
+    },
+    "1211": {
+      "op": "ADD"
+    },
+    "1212": {
+      "op": "MSTORE"
+    },
+    "1213": {
+      "op": "PUSH2",
+      "value": "0x4C7"
+    },
+    "1216": {
+      "op": "DUP2"
+    },
+    "1217": {
+      "op": "DUP6"
+    },
+    "1218": {
+      "op": "DUP8"
+    },
+    "1219": {
+      "op": "PUSH2",
+      "value": "0x46B"
+    },
+    "1222": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1223": {
+      "op": "JUMPDEST"
+    },
+    "1224": {
+      "op": "SWAP10"
+    },
+    "1225": {
+      "op": "SWAP9"
+    },
+    "1226": {
+      "op": "POP"
+    },
+    "1227": {
+      "op": "POP"
+    },
+    "1228": {
+      "op": "POP"
+    },
+    "1229": {
+      "op": "POP"
+    },
+    "1230": {
+      "op": "POP"
+    },
+    "1231": {
+      "op": "POP"
+    },
+    "1232": {
+      "op": "POP"
+    },
+    "1233": {
+      "op": "POP"
+    },
+    "1234": {
+      "op": "POP"
+    },
+    "1235": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1236": {
+      "op": "JUMPDEST"
+    },
+    "1237": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1239": {
+      "op": "DUP1"
+    },
+    "1240": {
+      "op": "DUP3"
+    },
+    "1241": {
+      "op": "MSTORE"
+    },
+    "1242": {
+      "op": "PUSH1",
+      "value": "0x16"
+    },
+    "1244": {
+      "op": "SWAP1"
+    },
+    "1245": {
+      "op": "DUP3"
+    },
+    "1246": {
+      "op": "ADD"
+    },
+    "1247": {
+      "op": "MSTORE"
+    },
+    "1248": {
+      "op": "PUSH22",
+      "value": "0x2CB7BA9030B932903737BA103A34329037BBB732B917"
+    },
+    "1271": {
+      "op": "PUSH1",
+      "value": "0x51"
+    },
+    "1273": {
+      "op": "SHL"
+    },
+    "1274": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1276": {
+      "op": "DUP3"
+    },
+    "1277": {
+      "op": "ADD"
+    },
+    "1278": {
+      "op": "MSTORE"
+    },
+    "1279": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "1281": {
+      "op": "ADD"
+    },
+    "1282": {
+      "op": "SWAP1"
+    },
+    "1283": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "13e64f4ec978b9048415b62e2b14d631e4b1e06e",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\ncontract BuyMeACoffee {\n    address payable public owner;\n\n    address[] public kindPeople;\n\n    event NewCoffeeBought(\n        uint256 _datetime,\n        address indexed _tipper,\n        string _name,\n        uint256 _amount,\n        string _message\n    );\n\n    event WithdrawnCoffees(uint256 _datetime, uint256 _amount);\n\n    modifier onlyOwner() {\n        require(msg.sender == owner, \"You are not the owner.\");\n        _;\n    }\n\n    constructor() {\n        owner = payable(msg.sender);\n    }\n\n    // function for others to send donation/tip\n    function buyCoffee(string calldata _name, string calldata _message)\n        external\n        payable\n    {\n        require(msg.value > 0, \"Value must be greater than 0.\");\n        kindPeople.push(msg.sender);\n\n        emit NewCoffeeBought(\n            block.timestamp,\n            msg.sender,\n            _name,\n            msg.value,\n            _message\n        );\n    }\n\n    // function to check how many people tipped\n    function howMany() external view returns (uint256) {\n        return kindPeople.length;\n    }\n\n    // function to check balance of tips\n    function checkBalance() external view onlyOwner returns (uint256) {\n        return address(this).balance;\n    }\n\n    // function to withdraw all tips\n    function withdraw() external onlyOwner {\n        uint256 balance = address(this).balance;\n        payable(msg.sender).transfer(balance);\n        emit WithdrawnCoffees(block.timestamp, balance);\n    }\n\n    // function to change address of owner\n    function changeOwner(address _newOwner) external onlyOwner {\n        owner = payable(_newOwner);\n    }\n}\n",
+  "sourceMap": "58:1620:0:-:0;;;495:58;;;;;;;;;-1:-1:-1;519:5:0;:27;;-1:-1:-1;;;;;;519:27:0;535:10;519:27;;;58:1620;;;;;;",
+  "sourcePath": "contracts/BuyMeACoffee.sol",
+  "type": "contract"
+}
