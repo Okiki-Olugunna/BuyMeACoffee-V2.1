@@ -35,3 +35,5 @@ https://user-images.githubusercontent.com/92333005/184411101-61f09d71-6705-4d23-
 - https://goerli.etherscan.io/tx/0x499cf50e2ab827b15732ef79ec7af9e02a729fb41738c9352241a428082d9a74
 
 - https://goerli.etherscan.io/tx/0x38985a0db1f715eb2e68c65a61c16ef80034c47342d88f9ad68928f2913994ae
+
+To have a look at the V1 repository, click here: https://github.com/Okiki-Olugunna/BuyMeACoffee-V1 
