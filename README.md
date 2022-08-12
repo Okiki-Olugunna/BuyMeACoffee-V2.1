@@ -12,7 +12,7 @@
 
 - Scripts and tests for the smart contract can be found in the relevant folders
 
-<b>Website link:</b> https://
+<b>Website link:</b> https://buymeacoffee-v2-1.okikicodes.repl.co/
 
 <p>
 
@@ -26,7 +26,9 @@ To use this, make sure your wallet is funded with Goerli ETH. If you need to add
 
 <b>Demo:</b>
 
-[ add video ]
+https://user-images.githubusercontent.com/92333005/184411101-61f09d71-6705-4d23-9b56-8599dff58f39.mp4
+
+<p>
 
 #### Test Transactions With This Contract:
 
