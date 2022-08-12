@@ -1,4 +1,4 @@
-## Buy Me A Coffe V2
+## Buy Me A Coffee V2
 
 - A buy me a coffee dApp which supplies the received donations to Aave V3 to generate interest
 
