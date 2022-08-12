@@ -22,7 +22,7 @@ To use this, make sure your wallet is funded with Goerli ETH. If you need to add
 
 <img src="readme-files/website-preview-top.png" width="600">
 
-<img src="readme-files/website-preview-bottom.png" width="600">
+<img src="readme-files/website-preview-bottom-edit.png" width="600">
 
 <b>Demo:</b>
 
