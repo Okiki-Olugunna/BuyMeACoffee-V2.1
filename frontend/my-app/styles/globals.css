@@ -5,6 +5,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
+  background-image: linear-gradient(135deg, #21222A, rgb(71, 71, 155), rgb(170, 170, 221));
+
 }
 
 a {
@@ -15,7 +17,7 @@ a {
 
 * {
   box-sizing: border-box;
-  background-color: #21222A;;;
+  /* background-color: #21222A; */
 }
 
 img {
@@ -36,6 +38,7 @@ button {
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+  background-color: #21222A;
 }
 
 button:hover {
@@ -67,7 +70,7 @@ footer {
   width: 40%;
   height: 33%;
   color: white;
-  background-color: white;
+  background-color: #21222A;
 
   border: 1px solid #eaeaea;
   border-radius: 10px;
@@ -104,16 +107,22 @@ footer {
 .loading {
   margin-bottom: 20px;
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
+  /* justify-content: center; */
   vertical-align: middle;
   width: 64px;
   height: 64px;
   border-radius: 64px;
+
+  transform: translateX(-35%);
 }
 
 .loading::before {
   margin-bottom: 18px;
+  /* margin-left: 0%; */
+  margin-right: 100%;
   position: absolute;
+  
   content: "";
   width: 64px;
   height: 64px;
@@ -121,6 +130,10 @@ footer {
   color: #fdfdfd;
   box-shadow: inset -5px 0px 0px 5px currentColor;
   clip: rect(0, 64px, 32px, 0);
+
+  /* align-content: center; */
+  /* justify-content: center; */
+  /* align-items: center;  */
 
   animation: rotate 1s infinite linear;
 }

@@ -89,8 +89,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #21222A;
+  border-color: #21222A;
 }
 
 .card h2 {
@@ -102,6 +102,45 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.card input {
+  margin: 0.75rem;
+}
+
+/* Custom coffee card style */
+.customcard {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 600px;
+}
+.customcard:hover,
+.customcard:focus,
+.customcard:active {
+  color: #21222A;
+  border-color: #21222A;
+}
+.customcard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.6rem;
+}
+.customcard p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.customcard input {
+  margin: 0.75rem;
+  border-radius: 7px;
+  border-color: #21222A;
+  width: 60%;
+  padding: 5px;
 }
 
 .logo {
