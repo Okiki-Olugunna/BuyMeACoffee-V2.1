@@ -20,9 +20,9 @@ To use this, make sure your wallet is funded with Goerli ETH. If you need to add
 
 #### Preview of the website:
 
-<img src="readme-files/website-preview-top" width="600">
+<img src="readme-files/website-preview-top.png" width="600">
 
-<img src="readme-files/website-preview-bottom" width="600">
+<img src="readme-files/website-preview-bottom.png" width="600">
 
 <b>Demo:</b>
 
