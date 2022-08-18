@@ -1,7 +1,7 @@
 import React from "react";
 // import "./Popup.css";
 
-export default function Popup(props) {
+export default function ThankYouPopup(props) {
   return props.trigger ? (
     <div className="popup">
       <div className="popup-inner">
