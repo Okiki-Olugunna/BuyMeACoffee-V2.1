@@ -18,7 +18,9 @@
 
 <p>
 
-To use this, make sure your wallet is funded with Goerli ETH. If you need to add ETH to your wallet, top up at this faucet: https://goerlifaucet.com/
+<b>To use this on your desktop/laptop</b>, make sure you have MetaMask installed in your browser & your wallet is funded with Goerli ETH. If you need to add ETH to your wallet, top up at this faucet: https://goerlifaucet.com/
+
+<b>To use this on mobile</b>, navigate to your installed MetaMask app, click the hamburger icon in the top left, click 'Browser', then go to https://buymeacoffee-v2.okikicodes.repl.co/ 
 
 #### Preview of the website:
 
