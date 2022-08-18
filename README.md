@@ -4,7 +4,7 @@
 
 - Currently only supports ETH
 
-- The deployed address of the smart contract can be found here: [0xE9D3AB08080d797DC6856fC476e2b9BcD778Af84](https://goerli.etherscan.io/address/0xE9D3AB08080d797DC6856fC476e2b9BcD778Af84)
+- The deployed address of the smart contract can be found here: [0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08](https://goerli.etherscan.io/address/0xe43841588d314d6fe155db1fd6f7c9d5b71faf08)
 
 - The owner of the contract can withdraw these donations at any time they wish
 
@@ -30,11 +30,11 @@ https://user-images.githubusercontent.com/92333005/184411101-61f09d71-6705-4d23-
 
 <p> </p>
 
-#### Test Transactions With This Contract:
+#### Example Test Transactions With This Contract:
 
-- https://goerli.etherscan.io/tx/0x499cf50e2ab827b15732ef79ec7af9e02a729fb41738c9352241a428082d9a74
-
-- https://goerli.etherscan.io/tx/0x38985a0db1f715eb2e68c65a61c16ef80034c47342d88f9ad68928f2913994ae
+- Medium coffee tx: https://goerli.etherscan.io/tx/0x1eb4ff6df563c18eca814a4d5bf89670677866554e6262f8099eab279356c878 
+- Custom coffee tx: https://goerli.etherscan.io/tx/0xaac607e9a9ef1805e7f76339d8a82fcd11accd55ca4c6be260bf88629ec27ae5 
+- Withdraw tx: 
 
 <p> </p>
   
