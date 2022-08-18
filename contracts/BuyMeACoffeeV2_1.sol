@@ -119,18 +119,14 @@ contract BuyMeACoffeeV2_1 {
         // calculating the amount of aWETH earned
         uint256 aWETHBalance = WETH_ATOKEN.balanceOf(address(this));
         // approving the gateway to spend the aWETH
-        WETH_ATOKEN.approve(address(AAVE_V3_POOL), aWETHBalance);
+        WETH_ATOKEN.approve(address(WETH_GATEWAY), aWETHBalance);
 
         // withdrawing the interest and ETH
         WETH_GATEWAY.withdrawETH(
             address(AAVE_V3_POOL),
             type(uint256).max,
-            //aWETHBalance,
-            address(this)
+            owner
         );
-
-        //sending balance to owner
-        owner.transfer(address(this).balance);
 
         // emitting event
         emit WithdrawnCoffees(block.timestamp, aWETHBalance);
