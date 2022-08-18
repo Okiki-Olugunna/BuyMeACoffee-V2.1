@@ -12,7 +12,7 @@
 
 - Scripts and tests for the smart contract can be found in the relevant folders
 
-<b>Website link:</b> https://buymeacoffee-v2-1.okikicodes.repl.co/
+<b>Website link:</b> https://buymeacoffee-v2.okikicodes.repl.co/
 
 <p>
 
