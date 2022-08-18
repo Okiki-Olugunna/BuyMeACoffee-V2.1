@@ -34,9 +34,9 @@ https://user-images.githubusercontent.com/92333005/184411101-61f09d71-6705-4d23-
 
 #### Example Test Transactions With This Contract:
 
-- Medium coffee tx: https://goerli.etherscan.io/tx/0x1eb4ff6df563c18eca814a4d5bf89670677866554e6262f8099eab279356c878 
-- Custom coffee tx: https://goerli.etherscan.io/tx/0xaac607e9a9ef1805e7f76339d8a82fcd11accd55ca4c6be260bf88629ec27ae5 
-- Withdraw tx: https://goerli.etherscan.io/tx/0x17bac565811039ced9e142037ef2aeb7251d799eaa6b24d2b6bd188f0231deb0
+- Medium coffee transaction: https://goerli.etherscan.io/tx/0x1eb4ff6df563c18eca814a4d5bf89670677866554e6262f8099eab279356c878 
+- Custom coffee transaction: https://goerli.etherscan.io/tx/0xaac607e9a9ef1805e7f76339d8a82fcd11accd55ca4c6be260bf88629ec27ae5 
+- Withdraw transaction: https://goerli.etherscan.io/tx/0x17bac565811039ced9e142037ef2aeb7251d799eaa6b24d2b6bd188f0231deb0
 
 <p> </p>
   
