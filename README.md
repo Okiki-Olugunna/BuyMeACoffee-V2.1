@@ -1,8 +1,10 @@
 ## Buy Me A Coffee V2
 
-- A buy me a coffee dApp which supplies the received donations to Aave V3 to generate interest
+[//]: # (- A buy me a coffee dApp which supplies the received donations to Aave V3 to generate interest)
 
-- Currently only supports ETH
+#### Earn interest on the donations to your craft - powered by Aave V3 
+
+- Currently only supports ETH 
 
 - The deployed address of the smart contract can be found here: [0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08](https://goerli.etherscan.io/address/0xe43841588d314d6fe155db1fd6f7c9d5b71faf08)
 
