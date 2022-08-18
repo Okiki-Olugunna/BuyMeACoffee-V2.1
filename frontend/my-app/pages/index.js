@@ -1,5 +1,6 @@
 import abi from "../utils/V2_1_abi.json";
-import Popup from "./components/Popup";
+import ThankYouPopup from "./components/ThankYouPopup";
+import WithdrawPopup from "./components/WithdrawPopup";
 import Loading from "./components/Loading";
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
@@ -7,11 +8,12 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import WithdrawCoffees from "./components/WithdrawCoffees";
 
 export default function Home() {
   // loading the V2_1 contract data
-  const contractAddress = "0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08";
   const contractABI = abi.abi;
+  const contractAddress = "0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08";
 
   // Component states
   const [currentAccount, setCurrentAccount] = useState(false);
@@ -22,6 +24,10 @@ export default function Home() {
 
   const [loading, setLoadingState] = useState(false);
   const [thankYouPopUp, setThankYouPopUp] = useState(false);
+  const [withdrawPopUp, setWithdrawPopUp] = useState(false);
+
+  // used to show the withdraw button
+  const [ownerAccount, setOwnerAccount] = useState(false);
 
   // event for input fields
   const onETHAmountChange = (event) => {
@@ -39,6 +45,8 @@ export default function Home() {
   // function to connect to metamask
   const connectWallet = async () => {
     console.log("Requesting account...");
+
+    // setOwnerAccount(false);
 
     // getting the chainid of the current network the user is connected to
     const chainId = await window.ethereum.request({ method: "eth_chainId" });
@@ -65,6 +73,32 @@ export default function Home() {
       }
     } else {
       console.log("Please install metamask");
+    }
+
+    // check to the see if the wallet address is the owner
+    if (ethereum) {
+      const provider = new ethers.providers.Web3Provider(ethereum, "any");
+      const signer = provider.getSigner();
+      const signerAddress = await signer.getAddress();
+      console.log(`The signers address is: ${signerAddress}`);
+
+      // loading the contract
+      const buyMeACoffeeContract = new ethers.Contract(
+        contractAddress,
+        contractABI,
+        signer
+      );
+
+      // loading the owner from the buymeacoffee contract
+      // console.log("checking the wallet address..");
+      const owner = await buyMeACoffeeContract.owner();
+      // console.log(`The owner of the contract is: ${owner}`);
+
+      // if the wallet address is equal to the owner
+      if (signerAddress == owner) {
+        // show withdraw button
+        setOwnerAccount(true);
+      }
     }
   };
 
@@ -250,7 +284,7 @@ export default function Home() {
         // remove loading popup
         setLoadingState(false);
         // show thank you popup
-        setThankYouPopUp(true);
+        setWithdrawPopUp(true);
       }
     } catch (error) {
       console.log(error);
@@ -259,9 +293,6 @@ export default function Home() {
 
   // withdraw donotions - for the owner of contract
   const withdrawCoffees = async () => {
-    // coffeeAmount = document.getElementById(coffeeAmount);
-    //coffeeAmount.preventDefault();
-
     try {
       const { ethereum } = window;
 
@@ -287,7 +318,7 @@ export default function Home() {
         // remove loading popup
         setLoadingState(false);
         // show popup
-        setThankYouPopUp(true);
+        setWithdrawPopUp(true);
       }
     } catch (error) {
       console.log(error);
@@ -331,9 +362,14 @@ export default function Home() {
         </center>
 
         {/* 'thank you' pop-up */}
-        <Popup trigger={thankYouPopUp} setTrigger={setThankYouPopUp}>
+        <ThankYouPopup trigger={thankYouPopUp} setTrigger={setThankYouPopUp}>
           <h3>Thank you for the donation!</h3>
-        </Popup>
+        </ThankYouPopup>
+
+        {/* 'Withdrawals have been made' pop-up */}
+        <WithdrawPopup trigger={withdrawPopUp} setTrigger={setWithdrawPopUp}>
+          <h3>All donations have been withdrawn!</h3>
+        </WithdrawPopup>
 
         <div className={styles.grid}>
           <a onClick={buySmallCoffee} className={styles.card}>
@@ -391,13 +427,25 @@ export default function Home() {
               </button>
             </p>
           </a>
-
-          {/* Withdraw the coffee donations */}
-          {/* <a onClick={withdrawCoffees} className={styles.card}>
-            <h2>Withdraw Coffees</h2>
-            <p>Reserved for the owner of the contract</p>
-          </a> */}
         </div>
+
+        {/* Withdraw the coffee donations */}
+        {/* <a onClick={withdrawCoffees} className={styles.withdrawcard}>
+          <h2>Withdraw Coffees</h2>
+          <p>Reserved for the owner of the contract</p>
+        </a> */}
+
+        {/* 'Withdraw Coffees' button*/}
+        <WithdrawCoffees
+          trigger={ownerAccount}
+          setTrigger={setOwnerAccount}
+          className={styles.withdrawcard}
+        >
+          <a onClick={withdrawCoffees}>
+            <h2>Withdraw Coffees</h2>
+            <p>Click to withdraw all of your donations</p>
+          </a>
+        </WithdrawCoffees>
       </main>
 
       <footer>
