@@ -10,7 +10,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   // loading the V2_1 contract data
-  const contractAddress = "0xE9D3AB08080d797DC6856fC476e2b9BcD778Af84";
+  const contractAddress = "0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08";
   const contractABI = abi.abi;
 
   // Component states
