@@ -138,6 +138,41 @@ footer {
   animation: rotate 1s infinite linear;
 }
 
+/* Withdraw coffees card style */
+.withdrawcard {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 600px;
+}
+.withdrawcard:hover,
+.withdrawcard:focus,
+.withdrawcard:active {
+  color: #21222A;
+  border-color: #21222A;
+}
+.withdrawcard h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.6rem;
+}
+.withdrawcard p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.withdrawcard input {
+  margin: 0.75rem;
+  border-radius: 7px;
+  border-color: #21222A;
+  width: 60%;
+  padding: 5px;
+}
+
 @keyframes rotate {
   0% {
       transform: rotate(0deg);
