@@ -7,6 +7,8 @@
 - The deployed address of the smart contract can be found here: [0xE43841588D314D6Fe155dB1Fd6F7C9D5b71fAf08](https://goerli.etherscan.io/address/0xe43841588d314d6fe155db1fd6f7c9d5b71faf08)
 
 - The owner of the contract can withdraw these donations at any time they wish
+   - Can use a script, or the withdraw button on the frontend 
+   - The withdraw button is only visible when the owner's wallet is connected
 
 - The frontend was built using Next.js
 
