@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Popup.css";
 
 export default function ThankYouPopup(props) {
   return props.trigger ? (
