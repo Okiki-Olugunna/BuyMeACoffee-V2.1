@@ -3,7 +3,7 @@ import json
 
 
 def deploy():
-    account = accounts.add(config["wallets"]["from_key"])
+    account = accounts.add(config["wallets"]["from_key"]["account"])
 
     print("Deploying BuyMeACoffeeV2_1 contract ...\n")
     contract = BuyMeACoffeeV2_1.deploy({"from": account})
