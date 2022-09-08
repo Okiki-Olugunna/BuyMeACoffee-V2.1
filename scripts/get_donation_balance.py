@@ -25,7 +25,7 @@ a_weth_token = w3.eth.contract(
 
 def main():
     # initialising my account
-    account = config["wallets"]["from_key"]
+    account = config["wallets"]["from_key"]["account"]
     account_address = config["addresses"]["account_address"]
 
     print(f"The coffee contract address is {contract_instance.address}\n")
