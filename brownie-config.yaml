@@ -3,6 +3,19 @@ dotenv: .env
 networks: 
   default: goerli-alchemy
 
-wallets:
-  from_key: ${PRIVATE_KEY}
+provider:
+  http: ${ALCHEMY_GOERLI_NODE_PROVIDER}
+  websockets: ${WEBSOCKETS_KEY}
 
+wallets:
+  from_key: 
+    account: ${PRIVATE_KEY}
+    donor_1: ${DONOR_1_KEY}
+    donor_2: ${DONOR_2_KEY}
+    donor_3: ${DONOR_3_KEY}
+
+addresses:
+  account_address: ${ACCOUNT_ADDRESS}
+  donor_1_address: ${DONOR_1_ADDRESS}
+  donor_2_address: ${DONOR_2_ADDRESS}
+  donor_3_address: ${DONOR_3_ADDRESS}
