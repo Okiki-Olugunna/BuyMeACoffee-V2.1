@@ -2,7 +2,15 @@
 
 [//]: # (- A buy me a coffee dApp which supplies the received donations to Aave V3 to generate interest)
 
-#### Earn interest on the donations to your craft - powered by Aave V3 
+### Earn interest on the donations to your craft - powered by Aave V3 
+
+<b>Website link:</b> https://buymeacoffee-v2.okikicodes.repl.co/
+
+<p>
+
+<b>To use this on your desktop/laptop</b>, make sure you have MetaMask installed in your browser & your wallet is funded with Goerli ETH. If you need to add ETH to your wallet, top up at this faucet: https://goerlifaucet.com/
+
+<b>To use this on mobile</b>, navigate to your installed MetaMask app, click the hamburger icon in the top left, click 'Browser', then go to https://buymeacoffee-v2.okikicodes.repl.co/
 
 - Currently only supports ETH 
 
@@ -16,13 +24,7 @@
 
 - Scripts and tests for the smart contract can be found in the relevant folders
 
-<b>Website link:</b> https://buymeacoffee-v2.okikicodes.repl.co/
-
-<p>
-
-<b>To use this on your desktop/laptop</b>, make sure you have MetaMask installed in your browser & your wallet is funded with Goerli ETH. If you need to add ETH to your wallet, top up at this faucet: https://goerlifaucet.com/
-
-<b>To use this on mobile</b>, navigate to your installed MetaMask app, click the hamburger icon in the top left, click 'Browser', then go to https://buymeacoffee-v2.okikicodes.repl.co/ 
+ 
 
 #### Preview of the website:
 
